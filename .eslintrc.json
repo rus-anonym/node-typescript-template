@@ -34,11 +34,16 @@
                 }
             }
         ],
-         "@typescript-eslint/naming-convention": [
+        "@typescript-eslint/naming-convention": [
             "error",
             {
                 "selector": "class",
-                "format": ["StrictPascalCase"]
+                "format": ["StrictPascalCase", "PascalCase"]
+            },
+            {
+                "selector": "variable",
+                "modifiers": ["const"],
+                "format": ["PascalCase"]
             },
             { "selector": "variableLike", "format": ["camelCase"] },
             {
