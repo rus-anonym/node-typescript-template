@@ -43,7 +43,7 @@
             {
                 "selector": "variable",
                 "modifiers": ["const"],
-                "format": ["PascalCase", "camelCase"]
+                "format": ["PascalCase", "camelCase", "UPPER_CASE"]
             },
             { "selector": "variableLike", "format": ["camelCase"] },
             {
