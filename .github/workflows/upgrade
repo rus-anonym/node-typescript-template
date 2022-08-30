@@ -1,3 +1,8 @@
+on:
+  schedule:
+  - cron: 0 0 * * *
+name: Update
+jobs:
 - name: package-update
   uses: taichi/actions-package-update@master
   env:
