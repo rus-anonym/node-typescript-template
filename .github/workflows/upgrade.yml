@@ -3,13 +3,16 @@ on:
         - cron: 0 0 * * *
 name: Update
 jobs:
-    name: package-update
-    uses: taichi/actions-package-update@master
-    env:
-        AUTHOR_EMAIL: alexandrsemin2033@gmail.com
-        AUTHOR_NAME: RusAnonym
-        EXECUTE: "true"
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        UPDATE_COMMAND: yarn
-    with:
-        args: upgrade --latest
+    update:
+        runs-on: ubuntu-latest
+        steps:
+            - name: package-update
+              uses: taichi/actions-package-update@master
+              env:
+                  AUTHOR_EMAIL: alexandrsemin2033@gmail.com
+                  AUTHOR_NAME: RusAnonym
+                  EXECUTE: "true"
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  UPDATE_COMMAND: yarn
+              with:
+                  args: upgrade --latest
