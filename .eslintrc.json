@@ -22,6 +22,7 @@
         "semi": ["error", "always"],
         "object-curly-spacing": ["error", "always"],
         "semi-spacing": ["error", { "before": false, "after": true }],
+        "key-spacing": ["error", { "mode": "strict" }],
         "@typescript-eslint/explicit-function-return-type": "error",
         "@typescript-eslint/explicit-member-accessibility": [
             "error",
